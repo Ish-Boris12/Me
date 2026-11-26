@@ -1,11 +1,252 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <meta name="theme-color" content="#0d202f">
+    <title>I&B LTD | Transport & Agriculture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Ish.css">
 </head>
 <body>
-    
+    <div class="splash-screen" id="siteSplash" role="status" aria-label="I&B LTD animated logo">
+        <div class="splash-emblem" aria-hidden="true"><span>I</span><span class="splash-ampersand">&amp;</span><span>B</span></div>
+        <p class="splash-name">I&amp;B LTD <span>RWANDA</span></p>
+        <div class="splash-loader" aria-hidden="true"></div>
+        <button class="splash-skip" id="splashSkip" type="button" data-i18n="skipSplash">Skip intro</button>
+    </div>
+    <div class="topbar">
+        <div class="container">
+            <span class="topbar-tagline" data-i18n="tagline">Good work deserves a clear way forward</span>
+            <div class="topbar-controls">
+                <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false" aria-label="Switch to light mode" data-i18n-aria-label="switchToLight">
+                    <span class="theme-symbol" aria-hidden="true">☼</span>
+                    <span id="themeToggleLabel" data-i18n="themeLight">Light mode</span>
+                </button>
+                <label class="language-picker" for="languageSelect">
+                <span data-i18n="languageLabel">Language</span>
+                <select id="languageSelect" aria-label="Select language" data-i18n-aria-label="selectLanguage">
+                    <option value="rw">Kinyarwanda</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="sw">Kiswahili</option>
+                </select>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="container" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
+            <a class="brand" href="#home" data-view-target="home" aria-label="I&B LTD home" data-i18n-aria-label="brandHome">
+                <span class="brand-mark">I&B</span>
+                <span class="brand-name">I&B LTD <small>RWANDA</small></span>
+            </a>
+            <button class="menu-btn" type="button" aria-label="Open menu" data-i18n-aria-label="openMenu" aria-expanded="false" data-i18n="menu">Menu</button>
+            <div class="nav-links">
+                <a href="#home" data-view-target="home" data-i18n="navHome">Home</a>
+                <a href="#services" data-view-target="services" data-i18n="navServices">Solutions</a>
+                <a href="#how" data-view-target="how" data-i18n="navHow">How it works</a>
+                <a href="#contact" data-view-target="contact" data-i18n="navContact">Contact</a>
+                <a class="nav-cta" href="#" data-open-modal data-i18n="navRequest">Request a service</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home" data-page-view="home">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="eyebrow" data-i18n="heroEyebrow">Here to help keep you moving</span>
+                    <h1><span data-i18n="heroTitleStart">Good things grow</span><br><em data-i18n="heroTitleEnd">when we move together.</em></h1>
+                    <p data-i18n="heroText">A harvest, a delivery, a busy day on the road - behind every job is someone counting on it. We bring transport and farm support together to help you find the next practical step.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#services" data-view-target="services"><span data-i18n="heroExplore">See how we can help</span> <span aria-hidden="true">-&gt;</span></a>
+                        <a class="btn btn-outline" href="#how" data-view-target="how" data-i18n="heroAbout">Get to know us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="impact-strip" data-page-view="home">
+            <div class="container">
+                <div class="impact-grid">
+                    <div class="impact-item"><strong data-i18n="impact1Title">Your time matters</strong><span data-i18n="impact1Text">We start with what you need</span></div>
+                    <div class="impact-item"><strong data-i18n="impact2Title">Local understanding</strong><span data-i18n="impact2Text">Made for work in Rwanda</span></div>
+                    <div class="impact-item"><strong data-i18n="impact3Title">Straight answers</strong><span data-i18n="impact3Text">Clear plans, honest updates</span></div>
+                    <div class="impact-item"><strong data-i18n="impact4Title">Here together</strong><span data-i18n="impact4Text">One partner for the next step</span></div>
+                </div>
+            </div>
+        </div>
+
+        <section class="services" id="services" data-page-view="services" hidden>
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow" style="color:var(--green)" data-i18n="servicesEyebrow">What we do</span>
+                        <h2><span data-i18n="servicesTitleStart">Real help for the</span><br><span data-i18n="servicesTitleEnd">work you do</span></h2>
+                    </div>
+                    <p data-i18n="servicesIntro">Whether you're moving a harvest or planning the next growing season, tell us what matters most. We'll help you work out a practical way forward.</p>
+                </div>
+
+                <div class="service-tabs" role="tablist" aria-label="Choose a service area" data-i18n-aria-label="serviceTabsLabel">
+                    <button class="service-tab active" id="serviceTabTransport" type="button" role="tab" aria-selected="true" aria-controls="transportPanel" data-service-tab="transport" data-i18n="serviceTabTransport">Transport</button>
+                    <button class="service-tab" id="serviceTabFarm" type="button" role="tab" aria-selected="false" aria-controls="farmPanel" tabindex="-1" data-service-tab="farm" data-i18n="serviceTabFarm">Farm support</button>
+                    <button class="service-tab" id="serviceTabMarket" type="button" role="tab" aria-selected="false" aria-controls="marketPanel" tabindex="-1" data-service-tab="market" data-i18n="serviceTabMarket">Market access</button>
+                </div>
+
+                <div class="service-grid">
+                    <article class="service-card featured" id="transportPanel" role="tabpanel" aria-labelledby="serviceTabTransport" data-service-panel="transport">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tea_harvesting_261224.jpg?width=1280" alt="Tea growers harvesting tea in Rwanda" data-i18n-alt="altTransport">
+                        <div class="card-content">
+                            <div class="card-icon">01</div>
+                            <h3 data-i18n="transportTitle">Get your goods moving</h3>
+                            <p data-i18n="transportText">Need to move crops or supplies? Tell us where they need to go and we'll talk through the details with you.</p>
+                            <a class="card-link" href="#" data-open-modal><span data-i18n="transportLink">Let's talk transport</span> -&gt;</a>
+                        </div>
+                    </article>
+                    <article class="service-card" id="farmPanel" role="tabpanel" aria-labelledby="serviceTabFarm" data-service-panel="farm" hidden>
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rwandan_Tea.jpg?width=1280" alt="Tea plantation in western Rwanda" data-i18n-alt="altFarmer">
+                        <div class="card-content">
+                            <div class="card-icon">02</div>
+                            <h3 data-i18n="farmTitle">Support for your farm</h3>
+                            <p data-i18n="farmText">Every farm is different. Share what you're working on and let's find the kind of support that fits.</p>
+                            <a class="card-link" href="#" data-open-modal><span data-i18n="farmLink">Talk about your farm</span> -&gt;</a>
+                        </div>
+                    </article>
+                    <article class="service-card" id="marketPanel" role="tabpanel" aria-labelledby="serviceTabMarket" data-service-panel="market" hidden>
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sorwathe_Tea_Plantation%2C_Rwanda.jpg?width=1280" alt="Sorwathe tea plantation in Rwanda" data-i18n-alt="altProduce">
+                        <div class="card-content">
+                            <div class="card-icon">03</div>
+                            <h3 data-i18n="marketTitle">Find a way to market</h3>
+                            <p data-i18n="marketText">Let's talk about your produce, your timing and the next step toward reaching the right buyers.</p>
+                            <a class="card-link" href="#" data-open-modal><span data-i18n="marketLink">Explore your options</span> -&gt;</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="how" id="how" data-page-view="how" hidden>
+            <div class="container how-grid">
+                <div class="photo-stack">
+                    <img class="photo-main" src="https://commons.wikimedia.org/wiki/Special:FilePath/Sorwathe_Tea_Plantation%2C_Rwanda.jpg?width=1280" alt="Tea plantation at Sorwathe, Rwanda" data-i18n-alt="altLandscape">
+                    <img class="photo-small" src="https://commons.wikimedia.org/wiki/Special:FilePath/Rwanda_Tea_Plantations.jpg?width=1280" alt="Tea fields in western Rwanda" data-i18n-alt="altPlants">
+                    <div class="experience-badge"><span data-i18n="badgeLocal">Local</span><br><span data-i18n="badgeRwanda">Rwanda</span><br><span data-i18n="badgeSolutions">Solutions</span></div>
+                </div>
+                <div class="how-copy">
+                    <span class="eyebrow" style="color:var(--green)" data-i18n="howEyebrow">A more human way to work</span>
+                    <h2><span data-i18n="howTitleStart">First, we listen.</span><br><span data-i18n="howTitleEnd">Then we make a plan.</span></h2>
+                    <p data-i18n="howIntro">You know your work best. Tell us where you're stuck or what you're hoping to do, and we'll talk through practical options together.</p>
+                    <div class="people-note">
+                        <span class="people-note-mark" aria-hidden="true">I&B</span>
+                        <p><strong data-i18n="noteTitle">Good plans start with a real conversation.</strong><br><span data-i18n="noteText">No jargon, no pressure - just a chance to tell us what would help.</span></p>
+                    </div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">01</div>
+                            <div><h3 data-i18n="step1Title">Start with a conversation</h3><p data-i18n="step1Text">Tell us what's moving, where it needs to go, or what you'd like to grow.</p></div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">02</div>
+                            <div><h3 data-i18n="step2Title">Talk through a plan</h3><p data-i18n="step2Text">We'll confirm the details with you - timing, needs and next steps - before anything is booked.</p></div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">03</div>
+                            <div><h3 data-i18n="step3Title">Stay in the loop</h3><p data-i18n="step3Text">We'll keep communication clear, and if something changes, we'll talk it through.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" id="contact" data-page-view="contact" hidden>
+            <div class="container cta-inner">
+                <div>
+                    <span class="eyebrow" data-i18n="ctaEyebrow">No need to have it all figured out</span>
+                    <h2 data-i18n="ctaTitle">Tell us what's on your mind.</h2>
+                </div>
+                <button class="btn btn-primary" type="button" data-open-modal><span data-i18n="ctaButton">Let's talk</span> -&gt;</button>
+            </div>
+        </section>
+    </main>
+
+    <footer data-page-view="contact" hidden>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand">
+                        <span class="brand-mark">I&B</span>
+                        <span class="brand-name">I&B LTD <small>RWANDA</small></span>
+                    </div>
+                    <p data-i18n="footerIntro">We're here to make the everyday work of farming and transport a little easier - with practical help and a conversation that starts with you.</p>
+                </div>
+                <div>
+                    <h4 data-i18n="footerSolutions">Solutions</h4>
+                    <ul><li data-i18n="footerTransport">Goods transport</li><li data-i18n="footerFarm">Farm support</li><li data-i18n="footerMarket">Market access</li></ul>
+                </div>
+                <div>
+                    <h4 data-i18n="footerCompany">Company</h4>
+                    <ul><li><a href="#home" data-view-target="home" data-i18n="footerHome">Home</a></li><li><a href="#how" data-view-target="how" data-i18n="footerHow">How it works</a></li><li><a href="#contact" data-view-target="contact" data-i18n="footerContactLink">Contact</a></li></ul>
+                </div>
+                <div>
+                    <h4 data-i18n="footerContact">Contact</h4>
+                    <ul><li data-i18n="footerLocation">Kigali, Rwanda</li><li data-i18n="footerQuestion">Have a question?</li><li><a href="#contact" data-view-target="contact" data-i18n="footerRequest">Send us a request</a></li></ul>
+                </div>
+            </div>
+            <details class="photo-credits">
+                <summary data-i18n="photoCredits">Photo credits</summary>
+                <ul>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Rwanda_Tea_Plantations.jpg" target="_blank" rel="noopener noreferrer">Rwanda Tea Plantations</a> - Ivan Mucyo, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Rwandan_Tea.jpg" target="_blank" rel="noopener noreferrer">Rwandan Tea</a> - Ivan Mucyo, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Sorwathe_Tea_Plantation,_Rwanda.jpg" target="_blank" rel="noopener noreferrer">Sorwathe Tea Plantation, Rwanda</a> - Jeremy Weate, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Tea_harvesting_261224.jpg" target="_blank" rel="noopener noreferrer">Tea harvesting 261224</a> - Rogerirakoze, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+                </ul>
+            </details>
+            <div class="copyright">
+                <span data-i18n="copyright">Copyright 2026 I&B LTD. All rights reserved.</span>
+                <span><span data-i18n="privacy">Privacy</span> &nbsp;&nbsp; <span data-i18n="terms">Terms</span></span>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="requestModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-box">
+            <button class="close-modal" type="button" aria-label="Close" data-i18n-aria-label="closeDialog">X</button>
+            <span class="eyebrow" style="color:var(--green)">I&B LTD</span>
+            <h2 id="modalTitle" data-i18n="modalTitle">Let's talk about what you need</h2>
+            <form id="serviceForm" novalidate>
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="name" data-i18n="nameLabel">What should we call you?</label>
+                        <input id="name" name="name" required placeholder="Your name" data-i18n-placeholder="namePlaceholder">
+                    </div>
+                    <div class="field">
+                        <label for="phone" data-i18n="phoneLabel">What number can we reach you on?</label>
+                        <input id="phone" name="phone" type="tel" required placeholder="+250" data-i18n-placeholder="phonePlaceholder">
+                    </div>
+                    <div class="field full">
+                        <label for="service" data-i18n="serviceLabel">What would you like help with?</label>
+                        <select id="service" name="service" required>
+                            <option value="" data-i18n="chooseService">Choose a service</option>
+                            <option value="Farm & goods transport" data-i18n="serviceOptionTransport">Farm & goods transport</option>
+                            <option value="Farm support" data-i18n="serviceOptionFarm">Farm support</option>
+                            <option value="Market access" data-i18n="serviceOptionMarket">Market access</option>
+                        </select>
+                    </div>
+                    <div class="field full">
+                        <label for="details" data-i18n="detailsLabel">Anything else we should know? (optional)</label>
+                        <textarea id="details" name="details" rows="4" placeholder="A route, a crop, a question - whatever feels useful" data-i18n-placeholder="detailsPlaceholder"></textarea>
+                    </div>
+                </div>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                <button class="btn btn-primary" type="submit" style="margin-top:16px;width:100%" data-i18n="formSend">Send us a note</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,13 @@
+{
+  "name": "ib-ltd-rwanda",
+  "version": "1.0.0",
+  "private": true,
+  "description": "I&B LTD transport and agriculture website",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
