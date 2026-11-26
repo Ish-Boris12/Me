@@ -4,6 +4,9 @@ A simple full-stack website for I&B LTD's transport and agriculture services.
 The interface supports Kinyarwanda, English, French, and Kiswahili, with a
 light/dark appearance preference saved in the visitor's browser.
 
+The original I&B logo is an editable SVG at `assets/images/ib-logo.svg` and is
+served by the app at `/assets/images/ib-logo.svg`.
+
 ## Run locally
 
 Requires Node.js 22.13 or newer for the built-in SQLite module. No packages need

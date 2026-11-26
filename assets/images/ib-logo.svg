@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">I&amp;B LTD</title>
+  <rect width="512" height="512" rx="128" fill="#0d202f"/>
+  <rect x="10" y="10" width="492" height="492" rx="120" fill="none" stroke="#244555" stroke-width="12"/>
+  <path d="M345 169c-10-72 49-129 129-124-2 78-49 133-129 124Z" fill="#c8ef8a"/>
+  <path d="M354 159c38-28 68-60 102-94" fill="none" stroke="#174e43" stroke-linecap="round" stroke-width="11"/>
+  <text x="256" y="328" fill="#f5f8f6" font-family="Arial, Helvetica, sans-serif" font-size="166" font-weight="800" letter-spacing="-13" text-anchor="middle">
+    I<tspan fill="#c8ef8a">&amp;</tspan>B
+  </text>
+  <path d="M111 397c86-39 204-39 290 0M141 434c67-25 163-25 230 0" fill="none" stroke="#174e43" stroke-linecap="round" stroke-width="18"/>
+</svg>

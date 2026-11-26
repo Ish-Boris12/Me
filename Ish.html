@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="splash-screen" id="siteSplash" role="status" aria-label="I&B LTD animated logo">
-        <div class="splash-emblem" aria-hidden="true"><span>I</span><span class="splash-ampersand">&amp;</span><span>B</span></div>
+        <img class="splash-emblem" src="/assets/images/ib-logo.svg" alt="" aria-hidden="true">
         <p class="splash-name">I&amp;B LTD <span>RWANDA</span></p>
         <div class="splash-loader" aria-hidden="true"></div>
         <button class="splash-skip" id="splashSkip" type="button" data-i18n="skipSplash">Skip intro</button>
@@ -41,7 +41,7 @@
     <header>
         <nav class="container" aria-label="Main navigation" data-i18n-aria-label="mainNavigation">
             <a class="brand" href="#home" data-view-target="home" aria-label="I&B LTD home" data-i18n-aria-label="brandHome">
-                <span class="brand-mark">I&B</span>
+                <img class="brand-mark" src="/assets/images/ib-logo.svg" alt="" aria-hidden="true">
                 <span class="brand-name">I&B LTD <small>RWANDA</small></span>
             </a>
             <button class="menu-btn" type="button" aria-label="Open menu" data-i18n-aria-label="openMenu" aria-expanded="false" data-i18n="menu">Menu</button>
@@ -61,7 +61,12 @@
                 <div class="hero-content">
                     <span class="eyebrow" data-i18n="heroEyebrow">Here to help keep you moving</span>
                     <h1><span data-i18n="heroTitleStart">Good things grow</span><br><em data-i18n="heroTitleEnd">when we move together.</em></h1>
-                    <p data-i18n="heroText">A harvest, a delivery, a busy day on the road - behind every job is someone counting on it. We bring transport and farm support together to help you find the next practical step.</p>
+                    <p data-i18n="heroText">A harvest, a delivery, a busy day on the road - behind every job is someone counting on it. We bring reliable goods transport, practical farm support and market guidance together to help farmers, growers and families move forward with confidence.</p>
+                    <ul class="hero-highlights" aria-label="Our key services">
+                        <li><strong>Reliable transport</strong><span>From farms to markets and every stop in between</span></li>
+                        <li><strong>Practical support</strong><span>Clear help shaped around your specific needs</span></li>
+                        <li><strong>Local knowledge</strong><span>Solutions designed for work across Rwanda</span></li>
+                    </ul>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="#services" data-view-target="services"><span data-i18n="heroExplore">See how we can help</span> <span aria-hidden="true">-&gt;</span></a>
                         <a class="btn btn-outline" href="#how" data-view-target="how" data-i18n="heroAbout">Get to know us</a>
@@ -73,10 +78,10 @@
         <div class="impact-strip" data-page-view="home">
             <div class="container">
                 <div class="impact-grid">
-                    <div class="impact-item"><strong data-i18n="impact1Title">Your time matters</strong><span data-i18n="impact1Text">We start with what you need</span></div>
-                    <div class="impact-item"><strong data-i18n="impact2Title">Local understanding</strong><span data-i18n="impact2Text">Made for work in Rwanda</span></div>
-                    <div class="impact-item"><strong data-i18n="impact3Title">Straight answers</strong><span data-i18n="impact3Text">Clear plans, honest updates</span></div>
-                    <div class="impact-item"><strong data-i18n="impact4Title">Here together</strong><span data-i18n="impact4Text">One partner for the next step</span></div>
+                    <div class="impact-item"><strong data-i18n="impact1Title">Your time matters</strong><span data-i18n="impact1Text">We listen carefully, confirm important details and respond with practical options.</span></div>
+                    <div class="impact-item"><strong data-i18n="impact2Title">Local understanding</strong><span data-i18n="impact2Text">Our approach reflects local routes, farm work and Rwanda's market needs.</span></div>
+                    <div class="impact-item"><strong data-i18n="impact3Title">Straight answers</strong><span data-i18n="impact3Text">Receive clear timing, costs, responsibilities and honest progress updates.</span></div>
+                    <div class="impact-item"><strong data-i18n="impact4Title">Here together</strong><span data-i18n="impact4Text">Transport, farm support and market guidance from one reliable partner.</span></div>
                 </div>
             </div>
         </div>
@@ -164,9 +169,27 @@
 
         <section class="cta-section" id="contact" data-page-view="contact" hidden>
             <div class="container cta-inner">
-                <div>
+                <div class="contact-intro">
                     <span class="eyebrow" data-i18n="ctaEyebrow">No need to have it all figured out</span>
                     <h2 data-i18n="ctaTitle">Tell us what's on your mind.</h2>
+                    <p>Whether you need goods transported, farm support, help reaching a market, or advice about a project, our team is ready to listen and explain the best available option.</p>
+                </div>
+                <div class="contact-options">
+                    <a class="contact-option" href="tel:+250794136707">
+                        <span class="contact-label">Call us</span>
+                        <strong>+250 794 136 707</strong>
+                        <small>For immediate questions and service requests</small>
+                    </a>
+                    <a class="contact-option" href="mailto:borisishimwr@gmail.com">
+                        <span class="contact-label">Email us</span>
+                        <strong>borisishimwr@gmail.com</strong>
+                        <small>Send route details, questions or project information</small>
+                    </a>
+                    <div class="contact-option">
+                        <span class="contact-label">Visit us</span>
+                        <strong>Kigali, Rwanda</strong>
+                        <small>Meetings are arranged by phone or email</small>
+                    </div>
                 </div>
                 <button class="btn btn-primary" type="button" data-open-modal><span data-i18n="ctaButton">Let's talk</span> -&gt;</button>
             </div>
@@ -178,7 +201,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="brand">
-                        <span class="brand-mark">I&B</span>
+                        <img class="brand-mark" src="/assets/images/ib-logo.svg" alt="" aria-hidden="true">
                         <span class="brand-name">I&B LTD <small>RWANDA</small></span>
                     </div>
                     <p data-i18n="footerIntro">We're here to make the everyday work of farming and transport a little easier - with practical help and a conversation that starts with you.</p>
@@ -193,7 +216,13 @@
                 </div>
                 <div>
                     <h4 data-i18n="footerContact">Contact</h4>
-                    <ul><li data-i18n="footerLocation">Kigali, Rwanda</li><li data-i18n="footerQuestion">Have a question?</li><li><a href="#contact" data-view-target="contact" data-i18n="footerRequest">Send us a request</a></li></ul>
+                    <ul>
+                        <li data-i18n="footerLocation">Kigali, Rwanda</li>
+                        <li><a href="tel:+250794136707">+250 794 136 707</a></li>
+                        <li><a href="mailto:borisishimwr@gmail.com">borisishimwr@gmail.com</a></li>
+                        <li data-i18n="footerQuestion">Have a question?</li>
+                        <li><a href="#contact" data-view-target="contact" data-i18n="footerRequest">Send us a request</a></li>
+                    </ul>
                 </div>
             </div>
             <details class="photo-credits">

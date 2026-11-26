@@ -104,6 +104,7 @@ test("serves the frontend and reports API health", async (t) => {
     const pageContent = await page.text();
     const stylesheet = await fetch(`${baseUrl}/Ish.css`);
     const script = await fetch(`${baseUrl}/app.js`);
+    const logo = await fetch(`${baseUrl}/assets/images/ib-logo.svg`);
     const health = await fetch(`${baseUrl}/api/health`);
     const scriptContent = await script.text();
 
@@ -111,6 +112,7 @@ test("serves the frontend and reports API health", async (t) => {
     assert.match(pageContent, /href="Ish\.css"/);
     assert.match(pageContent, /src="app\.js"/);
     assert.match(pageContent, /class="splash-screen"/);
+    assert.match(pageContent, /src="\/assets\/images\/ib-logo\.svg"/);
     assert.match(pageContent, /id="themeToggle"/);
     assert.match(pageContent, /data-page-view="services"/);
     assert.match(pageContent, /id="languageSelect"/);
@@ -120,6 +122,9 @@ test("serves the frontend and reports API health", async (t) => {
     assert.match(pageContent, /option value="sw"/);
     assert.equal(stylesheet.status, 200);
     assert.equal(script.status, 200);
+    assert.equal(logo.status, 200);
+    assert.match(logo.headers.get("content-type"), /image\/svg\+xml/);
+    assert.match(await logo.text(), /<svg\b/);
     assert.match(await stylesheet.text(), /data-theme="light"/);
     assert.match(scriptContent, /fetch\("\/api\/requests"/);
     assert.match(scriptContent, /ib-ltd-theme/);

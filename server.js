@@ -20,6 +20,7 @@ const PUBLIC_FILES = new Map([
     ["/Ish.html", ["Ish.html", "text/html; charset=utf-8"]],
     ["/Ish.css", ["Ish.css", "text/css; charset=utf-8"]],
     ["/app.js", ["app.js", "text/javascript; charset=utf-8"]],
+    ["/assets/images/ib-logo.svg", ["assets/images/ib-logo.svg", "image/svg+xml"]],
 ]);
 
 class HttpError extends Error {
